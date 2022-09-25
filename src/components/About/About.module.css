@@ -1,0 +1,49 @@
+.about {
+    font-family: 'OpenSans';
+    background-color: var(--primary-background-color);
+}
+.aboutContainer {
+
+}
+.aboutImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.aboutDescription {
+        padding: 40px 30px;
+        color: #FFFFFF;
+}
+
+.aboutSubtitle {
+    font-size: 18px;
+    line-height: 1.66;
+    margin-bottom: 8px;
+}
+
+.aboutTitle {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+    margin-bottom: 24px;
+}
+
+.aboutText {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.aboutBtn {
+    display: block;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 10px 36px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    color: inherit;
+    background-color: inherit;
+
+}

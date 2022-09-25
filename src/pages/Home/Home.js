@@ -1,3 +1,4 @@
+import Container from '../../components/Container'
 import Header from '../../components/Header'
 import Hero from '../../components/Hero'
 import About from '../../components/About'
@@ -12,16 +13,19 @@ import styles from './Home.module.css';
 
 function Home() {
   return (
-    <>
-        <Header />
-        <Hero /> 
-        <About />
-		<Cases />
-		<Blog />
-		<Team />
-		<Contact />
-		<Footer />  
-    </>
+    <Container>
+      <Header />
+      <Hero /> 
+      <About />
+		  <Cases />
+		  <Blog />
+		  <Team />
+		  <Contact />
+		  <Footer />
+      
+
+    </Container>
+    
   );
 }
 
