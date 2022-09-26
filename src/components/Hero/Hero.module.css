@@ -30,16 +30,23 @@
     margin-top: 16px;
 }
 
-.heroButton {
-    display: flex;
-        align-items: center;
+.heroButton {    
+        text-align: center;
+        display: block;
         background-color: var(--primary-background-color);
         color: #E9E9E9;
         padding: 11px 29px;
-        border-color: var(--primary-background-color);
+        border: 1px solid var(--primary-background-color);
         border-radius: 5px;
         margin: 0 auto;
         margin-top: 16px;
+        
+}
+
+.heroButton:hover,
+.heroButton:focus {
+    background-color: #28a746db;
+    border-color: #28a746db;
 }
 
 .iconButton {

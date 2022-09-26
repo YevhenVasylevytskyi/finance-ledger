@@ -48,6 +48,12 @@
 
 }
 
+.aboutBtn:hover,
+.aboutBtn:focus {
+    background-color: #FFFFFF;
+    color: var(--primary-background-color-hover);
+}
+
 @media screen and (min-width: 768px) {
     .aboutContainer {
         display: flex;    

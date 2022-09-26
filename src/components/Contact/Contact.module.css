@@ -89,6 +89,15 @@
     background: #28A745;
 }
 
+.formSubmitBtn:hover,
+.formSubmitBtn:focus {
+    background-color: #28a746db;
+}
+
+.formSubmitBtnhover {
+    background-color: #28a746db;
+}
+
 @media screen and (min-width: 768px) {
     .contactContainer {
         display: flex;

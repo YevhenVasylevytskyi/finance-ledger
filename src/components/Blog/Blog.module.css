@@ -50,6 +50,12 @@
     background: inherit;
 }
 
+.blogBtn:hover,
+.blogBtn:focus {
+    background-color: #FFFFFF;
+    color: #0284D0;
+}
+
 @media screen and (min-width: 768px) {
     .blogContainer {
         display: flex;

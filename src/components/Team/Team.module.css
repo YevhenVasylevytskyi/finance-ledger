@@ -38,6 +38,12 @@
 
 }
 
+.teamWrapper:hover,
+.teamWrapper:focus {
+    transform: scale(1.03, 1.03);
+    box-shadow: 0 0 8px 1px;
+}
+
 .teamImg {
     display: block;
     width: 100%;

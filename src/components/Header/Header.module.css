@@ -12,8 +12,10 @@
     font-family: 'OpenSans';
 }
 
-.logoLink {
-    
+.logoLink:hover,
+.logoLink:focus {
+    opacity: 0.8;
+    transform: scale(1.05, 1.05);
 }
 
 .logo {
@@ -61,17 +63,6 @@
     
     color: #FFFFFF;
 }
-
-
-
-/* @media screen and (min-width: 320px) {
-    .header { 
-        width: 276px;
-        padding: 23px 32px 0px 32px;
-        
-    }
-    
-} */
 
 @media screen and (min-width: 768px) {
     .header {
