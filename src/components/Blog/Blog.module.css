@@ -1,5 +1,5 @@
 .blog {
-
+    font-family: 'OpenSans';
     background-color: var(--secondary-background-color-blue);
     color: var(--light-background);
 }

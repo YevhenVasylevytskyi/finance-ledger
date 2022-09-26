@@ -1,0 +1,90 @@
+.contact {
+    background-color: #F4F4F4;
+    font-family: 'OpenSans';
+}
+
+.contactContainer {
+
+}
+
+.contactImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.contactDescription {
+    padding: 40px 30px;
+    color: #FFFFFF;
+}
+
+.contactTitle {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1.26;
+    margin-bottom: 32px;
+    color: black;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formItem {
+    width: 280px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.formInput {
+    width: 228px;
+    height: 40px;
+    padding: 5px 15px;
+    margin-bottom: 32px;
+    border-radius: 5px;
+    /* border-color: #FFFFFF; */
+}
+
+.formLabel {
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    right: 15px;
+    top: 0px;
+    color: #808080;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 40px;
+    transition: .3s;
+}
+
+.worning {
+    font-size: 12px;
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    color: #eb5757;
+}
+
+.iconWorning {
+    width: 16px;
+    height: 16px;
+}
+
+.formSubmitBtn {
+    width: 155px;
+    display: block;
+    font-size: 16px;
+    line-height: 1.37;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px 0;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    color: inherit;
+    background: #28A745;
+}

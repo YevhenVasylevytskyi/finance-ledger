@@ -1,0 +1,58 @@
+.team {
+    color: black;
+    padding: 40px 20px;
+    font-family: 'OpenSans';
+}
+
+.teamSubtitle {
+    font-size: 18px;
+    line-height: 1.66;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.teamTitle {
+    font-weight: 300;
+    font-size: 38px;
+    line-height: 1.26;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.teamText {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.teamItem {
+    display: block;
+}
+
+.teamWrapper {
+    display: block;
+    position: relative;
+    background-color: inherit;
+    box-shadow: 0;
+
+}
+
+.teamImg {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.name {
+    font-size: 23px;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.position {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}

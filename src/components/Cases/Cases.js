@@ -1,6 +1,4 @@
 import styles from './Cases.module.css';
-// import cases from '../../assets/images/about/people.jpg'
-// import img from '../../assets/images/cases/'
 import cases1Jpg from '../../assets/images/cases/cases1.jpg'
 import cases2Jpg from '../../assets/images/cases/cases2.jpg'
 import cases3Jpg from '../../assets/images/cases/cases3.jpg'

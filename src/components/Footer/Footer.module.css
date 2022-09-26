@@ -1,0 +1,30 @@
+.footer {
+    color: #ffffff;
+    background-color: #333333;
+    padding: 20px auto;
+    font-family: 'OpenSans';
+}
+
+.footerContainer {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.socialIcon {
+    width: 35px;
+    height: 35px;
+    fill: #ffffff;
+    /* margin-right: 25px; */
+}
+
+.socialIcon:not(:last-child) {
+
+    margin-right: 25px;
+}
+
+.footerText {
+    text-align: center;
+    padding-bottom: 20px;
+}
