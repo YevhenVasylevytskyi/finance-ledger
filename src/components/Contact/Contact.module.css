@@ -88,3 +88,44 @@
     color: inherit;
     background: #28A745;
 }
+
+@media screen and (min-width: 768px) {
+    .contactContainer {
+        display: flex;
+    }
+
+    .contactItem {
+        width: 50%;
+    }
+
+    .contactImg {
+        height: 100%;
+    }
+
+    .contactDescription {
+        padding-right: 53px;
+        padding-left: 32px;
+    }
+
+    .formSubmitBtn {
+        font-size: 18px;
+        line-height: 1.38;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .contactContainer {
+        min-width: 1360px;
+    }
+    .contactDescription {
+        padding: 80px 28px 80px 20px;
+    }
+
+    .inputEmail {
+        margin-bottom: 60px;
+    }
+
+    .worning {
+        bottom: 30px;
+    }
+}

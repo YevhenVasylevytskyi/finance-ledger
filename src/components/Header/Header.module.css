@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
 
-    height: 120px;
+    /* height: 120px; */
     padding: 21px 22px 0px 22px;
 
     z-index: 10;
@@ -64,28 +64,60 @@
 
 
 
-@media screen and (min-width: 320px) {
+/* @media screen and (min-width: 320px) {
     .header { 
         width: 276px;
+        padding: 23px 32px 0px 32px;
         
     }
     
-}
+} */
 
 @media screen and (min-width: 768px) {
     .header {
         display: flex;
-        padding: 23px 32px 0px 32px;
+        padding:23px 32px 0px 32px;
         width: 704px;
         align-items: center;
-        justify-content: space-between;
-        
+        justify-content: space-between;        
     }
+    .headerContainer {
+        max-width: 1360px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .headerLogo {
+        font-size: 35px;
+        line-height: 1.21;
+        margin-bottom: 0;
+    }
+
+    .logoSvg {
+        margin-right: 10px;
+    }
+
+    .navItem {
+        padding: 0 10px;
+    }
+
+    .navLink {
+        font-size: 18px;
+        line-height: 1.56;
+    }
+
+    
 }
 
-@media screen and (min-width: 1280px) {
-.header {
+@media screen and (min-width: 1360px) {
+    .header {
         padding: 32px 28px 0px 28px;
         width: 1304px;
+        /* padding: 12px 0; */
+    }
+
+    .navItem {
+        padding: 0 20px;
     }
 }

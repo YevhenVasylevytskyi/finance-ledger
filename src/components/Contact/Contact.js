@@ -6,9 +6,12 @@ function Contact() {
   return (
     <section className={styles.contact} id="contact">
             <div className={styles.contactContainer}>
-                <picture className="pic">                        
-                    <img className={styles.contactImg} src={contactJpg} alt="man" />
-                </picture>
+                <div className={styles.contactItem}> 
+                    <picture className="pic">                        
+                        <img className={styles.contactImg} src={contactJpg} alt="man" />
+                    </picture>
+              </div> 
+              <div className={styles.contactItem}>
                 <div className={styles.contactDescription}>
                     <h2 className={styles.contactTitle}>Request Callback</h2>
                     <form  className={styles.form}>
@@ -30,6 +33,7 @@ function Contact() {
                     </form>
                 </div>
             </div>
+          </div>
         </section>
   );
 }

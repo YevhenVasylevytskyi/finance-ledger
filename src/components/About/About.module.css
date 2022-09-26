@@ -13,7 +13,7 @@
 }
 
 .aboutDescription {
-        padding: 40px 30px;
+        padding: 79px 30px;
         color: #FFFFFF;
 }
 
@@ -46,4 +46,49 @@
     color: inherit;
     background-color: inherit;
 
+}
+
+@media screen and (min-width: 768px) {
+    .aboutContainer {
+        display: flex;    
+
+    }
+
+    .aboutImg {
+        height: 100%;
+        width: 384px; /*виравити */
+    }
+
+    .aboutDescription {
+        padding: 62px 32px;
+    }
+
+    .aboutSubtitle {
+        font-size: 20px;
+        line-height: 1.65;
+    }
+
+    .aboutText {
+        font-size: 18px;
+        line-height: 1.56;
+    }
+
+    .aboutBtn {
+        font-size: 18px;
+        line-height: 1.56;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .aboutContainer {
+        min-width: 1360px;
+    }
+
+        .aboutImg {
+            width: 680px; /*виравити */
+        }
+
+    .aboutDescription {
+        padding: 80px 28px 86px 20px;
+    }
 }

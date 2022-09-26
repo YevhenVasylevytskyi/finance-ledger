@@ -28,10 +28,6 @@
     margin-bottom: 20px;
 }
 
-.casesList {
-
-}
-
 .casesItem {
     display: block;
     position: relative;
@@ -41,5 +37,46 @@
 .casesImg {
     display: block;
     width: 100%;
-}  
+}
+
+@media screen and (min-width: 768px) {
+    .casesSubtitle {
+        font-size: 20px;
+        line-height: 1.65;
+    }
+
+    .casesText {
+        font-size: 18px;
+        line-height: 1.56;
+    }
+
+    .casesList {
+        display: flex;
+        flex-wrap: wrap;        
+        /* добавити*/
+    }
+
+    .casesItem {
+        margin-right: 18px;
+        margin-bottom: 18px;
+        width: calc((100% - 36px) / 3);
+    }
+    .casesItem:nth-child(3n) {
+        margin-right: 0px;
+    }
+
+}
+
+@media screen and (min-width: 1360px) {
+    .cases {
+        padding: 80px 28px;
+    }
+
+    .casesItem {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: calc((100% - 100px) / 3);
+
+    }
+}
 
