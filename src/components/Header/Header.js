@@ -1,13 +1,28 @@
+import { useState } from 'react'
 import { NavLink } from "react-router-dom";
 
 import icons from '../../assets/sprite.svg'
 import styles from './Header.module.css';
 
 function Header() {
+  const [navbar, setNavbar] = useState(false)
 
-  return (
-    
-    <header className={styles.header}>        
+  const changeBacground = () => {
+    if (window.scrollY >= 120 && window.visualViewport.width < 768) {
+        setNavbar(true)
+    }
+    else if (window.scrollY >= 70 && window.visualViewport.width > 768) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+  window.addEventListener('scroll', changeBacground)
+
+  const navBg = navbar ? styles.active : styles.header
+
+  return (    
+    <header className={navBg}>        
       <NavLink className={styles.logoLink}>
         <span className={styles.logo}>
           <svg className={styles.logoSvg} width="40" height="35">

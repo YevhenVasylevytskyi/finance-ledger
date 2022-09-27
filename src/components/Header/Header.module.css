@@ -1,15 +1,22 @@
 .header {
     position: fixed;
     width: 100%;
-
-    /* height: 120px; */
     padding: 21px 22px 0px 22px;
-
     z-index: 10;
     margin: 0 auto;
-    /* text-align: center; */
     font-weight: 400;
     font-family: 'OpenSans';
+}
+
+.active {
+    position: fixed;
+    width: 276px;
+    padding: 21px 22px 21px 22px;
+    z-index: 10;
+    margin: 0 auto;
+    font-weight: 400;
+    font-family: 'OpenSans';
+    background: var(--header-background-color);
 }
 
 .logoLink:hover,
@@ -51,6 +58,7 @@
 }
 
 .item {
+    position: relative;
     text-decoration: none;
 }
 
@@ -59,7 +67,7 @@
 }
 .itemLink:after {
     content: '';
-    position: relative;
+    position: absolute;
     bottom: -3px;
     left: 0px;
     display: none;
@@ -86,6 +94,13 @@
         width: 704px;
         align-items: center;
         justify-content: space-between;        
+    }
+    .active {
+        display: flex;
+        padding: 23px 32px 23px 32px;
+        width: 704px;
+        align-items: center;
+        justify-content: space-between;
     }
     .headerContainer {
         max-width: 1360px;
@@ -121,6 +136,10 @@
         padding: 32px 28px 0px 28px;
         width: 1304px;
         /* padding: 12px 0; */
+    }
+    .active {
+        padding: 32px 28px 32px 28px;
+        width: 1304px;
     }
 
     .navItem {
