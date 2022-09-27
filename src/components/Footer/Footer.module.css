@@ -12,6 +12,7 @@
     padding: 20px 0;
 }
 
+
 .socialIcon {
     width: 35px;
     height: 35px;
@@ -19,7 +20,12 @@
     /* margin-right: 25px; */
 }
 
-.socialIcon:not(:last-child) {
+.socialIcon:hover,
+.socialIcon:focus {
+    fill: var(--background-color);
+}
+
+.socialLink:not(:last-child) {
 
     margin-right: 25px;
 }
