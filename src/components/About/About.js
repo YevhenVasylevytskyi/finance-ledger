@@ -1,5 +1,9 @@
 import styles from './About.module.css';
-import people from '../../assets/images/about/people.jpg';
+
+import peopleWebp1x from '../../assets/images/about/people.webp';
+import peopleWebp2x from '../../assets/images/about/people@2x.webp';
+import peopleJpg1x from '../../assets/images/about/people.jpg';
+import peopleJpg2x from '../../assets/images/about/people@2x.jpg';
 
 function About() {
   return (
@@ -7,9 +11,9 @@ function About() {
     <section className={styles.about} id={'about'}>
         <div className={styles.aboutContainer}>
             <picture>
-                {/* <source srcSet={`${imgWebp1x} 1x, ${imgWebp2x} 2x`} />
-                <source srcSet={`${imgJpg1x} 1x, ${imgJpg2x} 2x`}/> */}
-                <img className={styles.aboutImg} src={people} alt="people" />
+                <source srcset={`${peopleWebp1x} 1x, ${peopleWebp2x} 2x`}type="image/webp"/>
+                <source srcset={`${peopleJpg1x} 1x, ${peopleJpg2x} 2x`}/>
+                <img className={styles.aboutImg} src={peopleJpg1x} alt="people" />
             </picture>
             <div className={styles.aboutDescription}>
                 <p className={styles.aboutSubtitle}>What you are looking for</p>

@@ -1,14 +1,20 @@
 import styles from './Contact.module.css';
-import contactJpg from '../../assets/images/contact/contact.jpg'
-import icons from '../../assets/sprite.svg'
+import icons from '../../assets/sprite.svg';
+
+import contactWebp1x from '../../assets/images/contact/contact.webp';
+import contactWebp2x from '../../assets/images/contact/contact@2x.webp';
+import contactJpg1x from '../../assets/images/contact/contact.jpg';
+import contactJpg2x from '../../assets/images/contact/contact@2x.jpg';
 
 function Contact() {
   return (
     <section className={styles.contact} id={'contact'}>
             <div className={styles.contactContainer}>
                 <div className={styles.contactItem}> 
-                    <picture className="pic">                        
-                        <img className={styles.contactImg} src={contactJpg} alt="man" />
+                    <picture className="pic">
+                        <source srcset={`${contactWebp1x} 1x, ${contactWebp2x} 2x`}type="image/webp"/>
+                        <source srcset={`${contactJpg1x} 1x, ${contactJpg2x} 2x`}/>
+                        <img className={styles.contactImg} src={contactJpg1x} alt="man" />
                     </picture>
               </div> 
               <div className={styles.contactItem}>

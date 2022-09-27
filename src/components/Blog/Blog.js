@@ -1,5 +1,8 @@
 import styles from './Blog.module.css';
-import imgJpg1x from '../../assets/images/blog/blog.jpg';
+import blogWebp1x from '../../assets/images/blog/blog.webp';
+import blogWebp2x from '../../assets/images/blog/blog@2x.webp';
+import blogJpg1x from '../../assets/images/blog/blog.jpg';
+import blogJpg2x from '../../assets/images/blog/blog@2x.jpg';
 
 function Blog() {
   return (
@@ -8,9 +11,9 @@ function Blog() {
         <div className={styles.blogContainer}>
           <div className={styles.blogItem}>
             <picture>
-                {/* <source srcSet={`${imgWebp1x} 1x, ${imgWebp2x} 2x`} />
-                <source srcSet={`${imgJpg1x} 1x, ${imgJpg2x} 2x`} /> */}
-                <img className={styles.blogImg} src={imgJpg1x} alt="blog" />
+                <source srcSet={`${blogWebp1x} 1x, ${blogWebp2x} 2x`} />
+                <source srcSet={`${blogJpg1x} 1x, ${blogJpg2x} 2x`} />
+                <img className={styles.blogImg} src={blogJpg1x} alt="blog" />
             </picture>
           </div>
           <div className={styles.blogItem}>
