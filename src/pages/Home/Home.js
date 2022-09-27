@@ -10,11 +10,18 @@ import Footer from '../../components/Footer'
 
 import styles from './Home.module.css';
 
+const headerLinks = [
+  { url: 'home', title: 'Home' },
+  { url: 'about', title: 'About' },
+  { url: 'cases', title: 'Cases' },
+  { url: 'blog', title: 'Blog' },
+  { url: 'contact', title: 'Contact' },
+]
 
 function Home() {
   return (
     <Container>
-      <Header />
+      <Header headerLinks={headerLinks}/>
       <Hero /> 
       <About />
 		  <Cases />

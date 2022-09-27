@@ -39,6 +39,7 @@ function Team() {
       <ul className={styles.teamList}>
           {teams.map((team) => (
             <li
+              key={team.name}
               className={styles.teamItem}
             >
               <div className={styles.teamWrapper}>

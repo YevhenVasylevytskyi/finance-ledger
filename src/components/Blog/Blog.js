@@ -4,7 +4,7 @@ import imgJpg1x from '../../assets/images/blog/blog.jpg';
 function Blog() {
   return (
     <>
-      <section className={styles.blog} id="blog">
+      <section className={styles.blog} id={'blog'}>
         <div className={styles.blogContainer}>
           <div className={styles.blogItem}>
             <picture>

@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { NavLink } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-scroll';
 
-import icons from '../../assets/sprite.svg'
+import icons from '../../assets/sprite.svg';
 import styles from './Header.module.css';
 
-function Header() {
+function Header({headerLinks}) {
   const [navbar, setNavbar] = useState(false)
 
   const changeBacground = () => {
@@ -23,7 +23,11 @@ function Header() {
 
   return (    
     <header className={navBg}>        
-      <NavLink className={styles.logoLink}>
+      <Link
+        to={'home'}
+        smooth={true}
+        className={styles.logoLink}
+      >
         <span className={styles.logo}>
           <svg className={styles.logoSvg} width="40" height="35">
             <use href={`${icons}#logo`} />
@@ -32,43 +36,48 @@ function Header() {
             <span className={styles.logoText}> Ledger</span>
           </span>
         </span>
-      </NavLink>     
+      </Link>     
       
       <ul className={styles.list}>
         <li className={styles.item}>
-          <NavLink
-            className={styles.itemLink}
-            link='#home'>
+          <Link
+            to={'home'}
+            smooth={true}
+            className={styles.itemLink}>
             Home
-          </NavLink>
+          </Link>
 					</li>
 					<li className={styles.item}>
-          <NavLink
-            className={styles.itemLink}
-            link='#about'>
+          <Link
+            to={'about'}
+            smooth={true}
+            className={styles.itemLink}>
             About
-          </NavLink>
+          </Link>
 					</li>
 					<li className={styles.item}>
-          <NavLink
-            className={styles.itemLink}
-            link='#cases'>
+          <Link
+            to={'cases'}
+            smooth={true}
+            className={styles.itemLink}>
             Cases
-          </NavLink>
+          </Link>
 					</li>
 					<li className={styles.item}>
-          <NavLink
-            className={styles.itemLink}
-            link='#blog'>
+          <Link
+            to={'blog'}
+            smooth={true}
+            className={styles.itemLink}>
             Blog
-          </NavLink>
+          </Link>
 					</li>
 					<li className={styles.item}>
-          <NavLink
-            className={styles.itemLink}
-            link='#contact'>
+          <Link
+            to={'contact'}
+            smooth={true}
+            className={styles.itemLink}>
             Contact
-          </NavLink>
+          </Link>
 					</li>
         </ul>
     </header>

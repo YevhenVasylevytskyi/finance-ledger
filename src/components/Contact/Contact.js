@@ -4,7 +4,7 @@ import icons from '../../assets/sprite.svg'
 
 function Contact() {
   return (
-    <section className={styles.contact} id="contact">
+    <section className={styles.contact} id={'contact'}>
             <div className={styles.contactContainer}>
                 <div className={styles.contactItem}> 
                     <picture className="pic">                        

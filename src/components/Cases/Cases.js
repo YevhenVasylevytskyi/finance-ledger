@@ -46,6 +46,7 @@ function Cases() {
         <ul className={styles.casesList}>
           {images.map((image) => (
             <li
+              key={image.src}
               className={styles.casesItem}
             >
               <picture>

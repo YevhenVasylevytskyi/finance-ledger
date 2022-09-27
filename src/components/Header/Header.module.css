@@ -21,8 +21,7 @@
 
 .logoLink:hover,
 .logoLink:focus {
-    opacity: 0.8;
-    transform: scale(1.05, 1.05);
+    transform: scale(1.05);
 }
 
 .logo {
@@ -43,7 +42,12 @@
 .logoTitle {
     color: var(--background-color);
     font-size: 28px;
+}
 
+.logoTitle:hover,
+.logoTitle:focus {
+    color: var(--background-color-hover);
+    fill: var(--background-color-hover);
 }
 
 .logoText {

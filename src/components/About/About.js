@@ -4,7 +4,7 @@ import people from '../../assets/images/about/people.jpg';
 function About() {
   return (
     <>
-    <section className={styles.about} id="about">
+    <section className={styles.about} id={'about'}>
         <div className={styles.aboutContainer}>
             <picture>
                 {/* <source srcSet={`${imgWebp1x} 1x, ${imgWebp2x} 2x`} />

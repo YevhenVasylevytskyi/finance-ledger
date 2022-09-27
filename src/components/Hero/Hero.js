@@ -3,7 +3,7 @@ import icons from '../../assets/sprite.svg'
 
 function Hero() {
   return (
-    <div className={styles.hero}>
+    <div className={styles.hero} id="home">
       <h1 className={styles.heroTitle}>The Sky Is The Limit</h1>
       <p className={styles.heroText}>We provide world class financial assistance</p>
       <button type="button" className={styles.heroButton}>
