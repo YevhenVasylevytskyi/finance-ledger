@@ -8,6 +8,8 @@ import Team from '../../components/Team'
 import Contact from '../../components/Contact'
 import Footer from '../../components/Footer'
 
+import images from '../../assets/images/cases/casesImagesArr';
+
 import styles from './Home.module.css';
 
 const headerLinks = [
@@ -24,7 +26,7 @@ function Home() {
       <Header headerLinks={headerLinks}/>
       <Hero /> 
       <About />
-		  <Cases />
+      <Cases images={images} />
 		  <Blog />
 		  <Team />
 		  <Contact />

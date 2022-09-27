@@ -1,39 +1,25 @@
+import React, { useState } from 'react';
+import Modal from './Modal/Modal';
+
 import styles from './Cases.module.css';
-import cases1Jpg from '../../assets/images/cases/cases1.jpg'
-import cases2Jpg from '../../assets/images/cases/cases2.jpg'
-import cases3Jpg from '../../assets/images/cases/cases3.jpg'
-import cases4Jpg from '../../assets/images/cases/cases4.jpg'
-import cases5Jpg from '../../assets/images/cases/cases5.jpg'
-import cases6Jpg from '../../assets/images/cases/cases6.jpg'
 
-function Cases() {
+function Cases({ images }) {
+  const [showModal, setShowModal] = useState(false)
+  const [itemLooking, setItemLooking] = useState(null);  
 
-  const images = [
-    {
-      src: cases1Jpg,
-      alt: "cases"
-    },
-    {
-      src: cases2Jpg,
-      alt: "cases"
-    },
-    {
-      src: cases3Jpg,
-      alt: "cases"
-    },
-    {
-      src: cases4Jpg,
-      alt: "cases"
-    },
-    {
-      src: cases5Jpg,
-      alt: "cases"
-    },
-        {
-      src: cases6Jpg,
-      alt: "cases"
+  const onClickImg = (el) => { 
+    setShowModal(true)
+    setModalImg(el.jpg_1x, el.alt, el.id)
     }
-  ] 
+  
+  const setModalImg = (src, alt, id) => {
+    setItemLooking({ src: src, alt: alt, id: id })
+  } 
+  
+  const modalClose = () => {
+    setShowModal(false)
+    setItemLooking(null)
+  }
 
   return (
     <section className={styles.cases} id="cases">
@@ -46,15 +32,35 @@ function Cases() {
         <ul className={styles.casesList}>
           {images.map((image) => (
             <li
-              key={image.src}
+              key={image.id}
               className={styles.casesItem}
+              onClick={() => {onClickImg(image)}}
             >
               <picture>
-                <img className={styles.casesImg} src={image.src} alt={image.alt} />
+                <source
+                  srcSet={`${image.webp_1x} 1x, ${image.webp_2x} 2x`}
+                  media="(minWidth: 1360px)"
+                />
+                <source
+                  srcSet={`${image.jpg_1x} 1x, ${image.jpg_2x} 2x`}
+                  media="(minWidth: 1360px)"
+                />
+
+                <img className={styles.casesImg} src={`${image.webp_1x}`} alt={image.alt} />
               </picture>
             </li>
-          ))}
-        </ul>        
+          ))}          
+        </ul>
+        {showModal && (
+          <Modal
+            active={showModal}
+            setActive={setShowModal}
+            itemLooking={itemLooking}
+            onCloseModal={modalClose}
+            changeImage={setModalImg}
+            images={images}          
+          />
+        )}        
       </div>      
     </section>
   );

@@ -11,8 +11,8 @@ function About() {
     <section className={styles.about} id={'about'}>
         <div className={styles.aboutContainer}>
             <picture>
-                <source srcset={`${peopleWebp1x} 1x, ${peopleWebp2x} 2x`}type="image/webp"/>
-                <source srcset={`${peopleJpg1x} 1x, ${peopleJpg2x} 2x`}/>
+                <source srcSet={`${peopleWebp1x} 1x, ${peopleWebp2x} 2x`}type="image/webp"/>
+                <source srcSet={`${peopleJpg1x} 1x, ${peopleJpg2x} 2x`}/>
                 <img className={styles.aboutImg} src={peopleJpg1x} alt="people" />
             </picture>
             <div className={styles.aboutDescription}>

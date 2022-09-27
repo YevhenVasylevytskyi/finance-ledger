@@ -2,7 +2,6 @@
     font-family: 'OpenSans';
     color: var(--text-black);
     padding: 40px 20px;
-    /* max-width: 1360px; */
     margin: 0 auto;
 }
 
@@ -38,7 +37,7 @@
 .casesItem:focus:after {
     opacity: 1;
 }
-    
+
 .casesImg {
     display: block;
     width: 100%;
@@ -61,7 +60,7 @@
 
     .casesList {
         display: flex;
-        flex-wrap: wrap;        
+        flex-wrap: wrap;
         /* добавити*/
     }
 
@@ -70,6 +69,7 @@
         margin-bottom: 18px;
         width: calc((100% - 36px) / 3);
     }
+
     .casesItem:nth-child(3n) {
         margin-right: 0px;
     }
@@ -88,4 +88,3 @@
 
     }
 }
-

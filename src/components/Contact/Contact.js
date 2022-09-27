@@ -12,8 +12,8 @@ function Contact() {
             <div className={styles.contactContainer}>
                 <div className={styles.contactItem}> 
                     <picture className="pic">
-                        <source srcset={`${contactWebp1x} 1x, ${contactWebp2x} 2x`}type="image/webp"/>
-                        <source srcset={`${contactJpg1x} 1x, ${contactJpg2x} 2x`}/>
+                        <source srcSet={`${contactWebp1x} 1x, ${contactWebp2x} 2x`}type="image/webp"/>
+                        <source srcSet={`${contactJpg1x} 1x, ${contactJpg2x} 2x`}/>
                         <img className={styles.contactImg} src={contactJpg1x} alt="man" />
                     </picture>
               </div> 
