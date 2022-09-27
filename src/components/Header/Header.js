@@ -4,24 +4,20 @@ import icons from '../../assets/sprite.svg'
 import styles from './Header.module.css';
 
 function Header() {
+
   return (
     
-    <header className={styles.header}>
-      
-        
-        <NavLink className={styles.logoLink}>
-          <span className={styles.logo}>
-            <svg className={styles.logoSvg} width="40" height="35">
-              <use href={`${icons}#logo`} />
-            </svg>
+    <header className={styles.header}>        
+      <NavLink className={styles.logoLink}>
+        <span className={styles.logo}>
+          <svg className={styles.logoSvg} width="40" height="35">
+            <use href={`${icons}#logo`} />
+          </svg>
           <span className={styles.logoTitle}>Finance 
             <span className={styles.logoText}> Ledger</span>
           </span>
-           </span>
-          </NavLink>
-       
-        
-      
+        </span>
+      </NavLink>     
       
       <ul className={styles.list}>
         <li className={styles.item}>
@@ -60,7 +56,6 @@ function Header() {
           </NavLink>
 					</li>
         </ul>
-      
     </header>
   );
 }

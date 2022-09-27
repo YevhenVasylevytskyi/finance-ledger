@@ -1,6 +1,6 @@
 .cases {
     font-family: 'OpenSans';
-    color: var(--secondary-text-color);
+    color: var(--text-black);
     padding: 40px 20px;
     /* max-width: 1360px; */
     margin: 0 auto;

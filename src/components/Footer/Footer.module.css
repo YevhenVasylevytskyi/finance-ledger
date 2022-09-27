@@ -1,6 +1,6 @@
 .footer {
-    color: #ffffff;
-    background-color: #333333;
+    color: var(--text-white);
+    background-color: var(--footer-background-color);
     padding: 20px auto;
     font-family: 'OpenSans';
 }
@@ -15,7 +15,7 @@
 .socialIcon {
     width: 35px;
     height: 35px;
-    fill: #ffffff;
+    fill: var(--text-white);
     /* margin-right: 25px; */
 }
 

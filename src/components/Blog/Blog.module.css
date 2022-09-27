@@ -1,7 +1,7 @@
 .blog {
     font-family: 'OpenSans';
-    background-color: var(--secondary-background-color-blue);
-    color: var(--light-background);
+    background-color: var(--background-color-blue);
+    color: var(--text-white);
 }
 
 .blogContainer {
@@ -17,7 +17,7 @@
 
 .blogDescription {
     padding: 40px 30px;
-    color: #FFFFFF;
+    color: var(--text-white);
 }
 
 .blogSubtitle {
@@ -44,7 +44,7 @@
     font-size: 16px;
     line-height: 1.6;
     padding: 10px 36px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--light-background);
     border-radius: 5px;
     color: inherit;
     background: inherit;
@@ -52,7 +52,7 @@
 
 .blogBtn:hover,
 .blogBtn:focus {
-    background-color: #FFFFFF;
+    background-color: var(--light-background);
     color: #0284D0;
 }
 

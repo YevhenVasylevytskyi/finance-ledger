@@ -11,7 +11,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: #FFFFFF;
+    color: var(--text-white);
     font-family: 'OpenSans';
     
     text-align: center;
@@ -33,10 +33,10 @@
 .heroButton {    
         text-align: center;
         display: block;
-        background-color: var(--primary-background-color);
-        color: #E9E9E9;
+        background-color: var(--background-color);
+        color: var(--secondary-color);
         padding: 11px 29px;
-        border: 1px solid var(--primary-background-color);
+        border: 1px solid var(--background-color);
         border-radius: 5px;
         margin: 0 auto;
         margin-top: 16px;
@@ -45,13 +45,13 @@
 
 .heroButton:hover,
 .heroButton:focus {
-    background-color: #28a746db;
-    border-color: #28a746db;
+    background-color: var(--background-color-hover);
+    border-color: var(--background-color-hover);
 }
 
 .iconButton {
     margin-right: 4px;
-    fill: white;
+    fill: var(--text-white);
 }
 
 @media screen and (min-width: 768px) {

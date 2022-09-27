@@ -1,9 +1,6 @@
 .about {
     font-family: 'OpenSans';
-    background-color: var(--primary-background-color);
-}
-.aboutContainer {
-
+    background-color: var(--background-color);
 }
 .aboutImg {
     display: block;
@@ -14,7 +11,7 @@
 
 .aboutDescription {
         padding: 79px 30px;
-        color: #FFFFFF;
+        color: var(--text-white);
 }
 
 .aboutSubtitle {
@@ -41,7 +38,7 @@
     font-size: 16px;
     line-height: 1.6;
     padding: 10px 36px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--light-background);
     border-radius: 5px;
     color: inherit;
     background-color: inherit;
@@ -50,8 +47,8 @@
 
 .aboutBtn:hover,
 .aboutBtn:focus {
-    background-color: #FFFFFF;
-    color: var(--primary-background-color-hover);
+    background-color: var(--light-background);
+    color: var(--background-color-hover);
 }
 
 @media screen and (min-width: 768px) {
@@ -62,7 +59,7 @@
 
     .aboutImg {
         height: 100%;
-        width: 384px; /*виравити */
+        width: 384px;
     }
 
     .aboutDescription {

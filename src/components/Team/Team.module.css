@@ -1,5 +1,5 @@
 .team {
-    color: black;
+    color: var(--text-black);
     padding: 40px 20px;
     font-family: 'OpenSans';
 }
