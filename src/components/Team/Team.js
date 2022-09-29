@@ -1,8 +1,15 @@
-import teams from '../../assets/images/team/personImagesArr'
+import teams from './teamArr/teamArr'
+import TeamItem from './TeamItem/TeamItem'
+import socialIconsArr from '../Social/socialIcons/socialIconsArr';
+
 import styles from './Team.module.css';
 import icons from '../../assets/sprite.svg'
 
 function Team() {
+
+  // const { socialLink } = teams
+  
+
 
   return (
     <section className={styles.team} id='team'>
@@ -14,32 +21,12 @@ function Team() {
         </div>
       <ul className={styles.teamList}>
           {teams.map((team) => (
-            <li
+            <TeamItem
               key={team.name}
-              className={styles.teamItem}
-            >
-              <div className={styles.teamWrapper}>
-                <picture>
-                  <source srcSet={`${team.webp1x} 1x, ${team.webp2x} 2x`}
-                  // media='(minWidth: 1360px)'
-                  type="image/webp"/>
-                <source srcSet={`${team.jpg1x} 1x, ${team.jpg2x} 2x`}
-                  // media='(minWidth: 1360px)'
-                  type="image/jpg"/>
-                  <img className={styles.teamImg} src={team.jpg1x} alt={team.alt} />
-                </picture>
-                <ul className={styles.teamIconList}>                  
-                  {/* {socialIconsArr.map((item) => (
-                    <SocialItem item={item} key={item.icon_id} />
-                  ))} */}
-                </ul>
-                <div className={styles.description}>
-                        <h3 className={styles.name}>{team.name}</h3>
-                        <p className={styles.position}>{team.position}</p>
-                </div>
-
-              </div>
-            </li>
+              team={team}
+              styles={styles}
+              socialIconsArr={team.socialLink}
+               />
           ))}
         </ul>
       </div>

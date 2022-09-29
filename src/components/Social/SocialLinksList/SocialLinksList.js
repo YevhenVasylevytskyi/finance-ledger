@@ -1,8 +1,9 @@
 import SocialLinkItem from '../SocialLinkItem/SocialLinkItem';
 
-import socialIconsArr from '../socialIcons/socialIconsArr';
+// import socialIconsArr from '../socialIcons/socialIconsArr';
 
-const SocialLinksList = ({styles}) => {
+const SocialLinksList = ({ styles, socialIconsArr }) => {
+
     return (
         <ul className={styles.socialList}>
             {socialIconsArr.map((item) => {
