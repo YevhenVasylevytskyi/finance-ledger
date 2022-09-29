@@ -4,19 +4,17 @@
     padding: 20px auto;
 }
 
-.footerContainer {
+.socialList {
     display: flex;
-    /* flex-direction: column; */
+    align-items: center;
     justify-content: center;
     padding: 20px 0;
 }
-
 
 .socialIcon {
     width: 35px;
     height: 35px;
     fill: var(--text-white);
-    /* margin-right: 25px; */
 }
 
 .socialIcon:hover,
@@ -24,8 +22,7 @@
     fill: var(--background-color);
 }
 
-.socialLink:not(:last-child) {
-
+.socialItem:not(:last-child) {
     margin-right: 25px;
 }
 

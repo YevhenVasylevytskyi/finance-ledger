@@ -11,16 +11,16 @@ function About() {
     <section className={styles.about} id={'about'}>
         <div className={styles.aboutContainer}>
             <picture>
-                <source srcSet={`${peopleWebp1x} 1x, ${peopleWebp2x} 2x`}type="image/webp"/>
+                <source srcSet={`${peopleWebp1x} 1x, ${peopleWebp2x} 2x`}type='image/webp'/>
                 <source srcSet={`${peopleJpg1x} 1x, ${peopleJpg2x} 2x`}/>
-                <img className={styles.aboutImg} src={peopleJpg1x} alt="people" />
+                <img className={styles.aboutImg} src={peopleJpg1x} alt='people' />
             </picture>
             <div className={styles.aboutDescription}>
                 <p className={styles.aboutSubtitle}>What you are looking for</p>
                 <h2 className={styles.aboutTitle}>We provide bespoke solutions</h2>
                 <p className={styles.aboutText}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum dignissimos quae laudantium asperiores nam
                 aliquid impedit harum illum dolore explicabo ab dolores itaque rerum temporibus doloribus iste maiores deleniti?</p>
-                <button type="button" className={styles.aboutBtn}>Read More</button>
+                <button type='button' className={styles.aboutBtn}>Read More</button>
             </div>
         </div>
     </section>

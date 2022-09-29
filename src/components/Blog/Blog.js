@@ -13,7 +13,7 @@ function Blog() {
             <picture>
                 <source srcSet={`${blogWebp1x} 1x, ${blogWebp2x} 2x`} />
                 <source srcSet={`${blogJpg1x} 1x, ${blogJpg2x} 2x`} />
-                <img className={styles.blogImg} src={blogJpg1x} alt="blog" />
+                <img className={styles.blogImg} src={blogJpg1x} alt='blog' />
             </picture>
           </div>
           <div className={styles.blogItem}>
@@ -23,7 +23,7 @@ function Blog() {
                 <p className={styles.blogText}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum dignissimos quae laudantium asperiores nam
                 aliquid impedit harum illum dolore explicabo ab dolores itaque rerum temporibus doloribus iste maiores deleniti?
                 </p>
-                <button type="button" className={styles.blogBtn}>Read Our Blog</button>
+                <button type='button' className={styles.blogBtn}>Read Our Blog</button>
             </div>
           </div>
         </div>

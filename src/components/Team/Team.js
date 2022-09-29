@@ -1,35 +1,11 @@
+import teams from '../../assets/images/team/personImagesArr'
 import styles from './Team.module.css';
-import person1Jpg from '../../assets/images/team/person1.jpg'
-import person2Jpg from '../../assets/images/team/person2.jpg'
-import person3Jpg from '../../assets/images/team/person3.jpg'
+import icons from '../../assets/sprite.svg'
 
 function Team() {
 
-  const teams = [
-    {
-      src: person1Jpg,
-      alt: "cases",
-      name: "John Doe",
-      position: "President"
-
-    },
-    {
-      src: person2Jpg,
-      alt: "cases",
-      name: "Jane Doe",
-      position: "Vice President"
-
-    },
-    {
-      src: person3Jpg,
-      alt: "cases",
-      name: "Steve Smith",
-      position: "Marketing Head"
-
-    }    
-  ] 
   return (
-    <section className={styles.team} id="team">
+    <section className={styles.team} id='team'>
     <div className={styles.rest}>
       <div>
             <p className={styles.teamSubtitle}>Who we are</p>
@@ -44,8 +20,19 @@ function Team() {
             >
               <div className={styles.teamWrapper}>
                 <picture>
-                  <img className={styles.teamImg} src={team.src} alt={team.alt} />
+                  <source srcSet={`${team.webp1x} 1x, ${team.webp2x} 2x`}
+                  // media='(minWidth: 1360px)'
+                  type="image/webp"/>
+                <source srcSet={`${team.jpg1x} 1x, ${team.jpg2x} 2x`}
+                  // media='(minWidth: 1360px)'
+                  type="image/jpg"/>
+                  <img className={styles.teamImg} src={team.jpg1x} alt={team.alt} />
                 </picture>
+                <ul className={styles.teamIconList}>                  
+                  {/* {socialIconsArr.map((item) => (
+                    <SocialItem item={item} key={item.icon_id} />
+                  ))} */}
+                </ul>
                 <div className={styles.description}>
                         <h3 className={styles.name}>{team.name}</h3>
                         <p className={styles.position}>{team.position}</p>

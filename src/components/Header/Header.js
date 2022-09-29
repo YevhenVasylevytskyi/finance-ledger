@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
+import headerLinks from './headerLinks';
 
 import icons from '../../assets/sprite.svg';
 import styles from './Header.module.css';
 
-function Header({headerLinks}) {
+function Header() {
   const [navbar, setNavbar] = useState(false)
 
   const changeBacground = () => {
@@ -29,7 +30,7 @@ function Header({headerLinks}) {
         className={styles.logoLink}
       >
         <span className={styles.logo}>
-          <svg className={styles.logoSvg} width="40" height="35">
+          <svg className={styles.logoSvg} width='40' height='35'>
             <use href={`${icons}#logo`} />
           </svg>
           <span className={styles.logoTitle}>Finance 
@@ -39,46 +40,17 @@ function Header({headerLinks}) {
       </Link>     
       
       <ul className={styles.list}>
-        <li className={styles.item}>
-          <Link
-            to={'home'}
-            smooth={true}
-            className={styles.itemLink}>
-            Home
-          </Link>
+        {headerLinks.map((item) => {
+          return <li key={item.url} className={styles.item}>
+            <Link
+              to={item.url}
+              smooth={true}
+              className={styles.itemLink}
+            >
+              {item.title}
+            </Link>
 					</li>
-					<li className={styles.item}>
-          <Link
-            to={'about'}
-            smooth={true}
-            className={styles.itemLink}>
-            About
-          </Link>
-					</li>
-					<li className={styles.item}>
-          <Link
-            to={'cases'}
-            smooth={true}
-            className={styles.itemLink}>
-            Cases
-          </Link>
-					</li>
-					<li className={styles.item}>
-          <Link
-            to={'blog'}
-            smooth={true}
-            className={styles.itemLink}>
-            Blog
-          </Link>
-					</li>
-					<li className={styles.item}>
-          <Link
-            to={'contact'}
-            smooth={true}
-            className={styles.itemLink}>
-            Contact
-          </Link>
-					</li>
+        })}        
         </ul>
     </header>
   );

@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import icons from '../../../assets/sprite.svg'
+import icons from '../../assets/sprite.svg'
 
 import styles from './Modal.module.css'
 
-const modalRoot = document.querySelector('#modal-root')
+const modalRoot = document.querySelector('#modal-root');
 
 const Modal = ({ active, setActive, itemLooking, onCloseModal, changeImage, images }) => {
     
@@ -70,7 +70,7 @@ const Modal = ({ active, setActive, itemLooking, onCloseModal, changeImage, imag
                 <div className={styles.modalContainer}>
                     {findCurrentIndex ? (
                         <span className={styles.modalBtnLeft} onClick={prevImg}>
-                            <svg className={styles.modalBtnLeftSvg} width="9" height="18">
+                            <svg className={styles.modalBtnLeftSvg} width='9' height='18'>
                                 <use href={`${icons}#angle-right`}></use>
                             </svg>
                         </span>
@@ -80,7 +80,7 @@ const Modal = ({ active, setActive, itemLooking, onCloseModal, changeImage, imag
 
                     {findCurrentIndex === dataImages.length - 1 ? null : (
                         <span className={styles.modalBtnRight} onClick={nextImg}>
-                            <svg className={styles.modalBtnRightSvg} width="9" height="18">
+                            <svg className={styles.modalBtnRightSvg} width='9' height='18'>
                             <use href={`${icons}#angle-right`}></use>
                             </svg>
                         </span>
@@ -94,7 +94,7 @@ const Modal = ({ active, setActive, itemLooking, onCloseModal, changeImage, imag
                     </span>
                 </div>
                 <span className={styles.closeIcon} onClick={onCloseModal}>
-                    <svg className={styles.closeIcon} width="9" height="18">
+                    <svg className={styles.closeIcon} width='9' height='18'>
                         <use href={`${icons}#close-modal`}></use>
                     </svg>
                 </span>
