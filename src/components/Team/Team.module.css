@@ -30,23 +30,77 @@
 }
 
 .teamWrapper {
-    display: block;
     position: relative;
-    background-color: inherit;
-    box-shadow: 0;
-
 }
 
-.teamWrapper:hover,
-.teamWrapper:focus {
+.teamOwerlay {
+    display: block;
+    position: relative;
+}
+
+.teamOwerlay:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+}
+
+.teamOwerlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+.teamOwerlay:hover,
+.teamOwerlay:focus {
     transform: scale(1.03, 1.03);
     box-shadow: 0 0 8px 1px;
+}
+
+.teamOwerlay:hover:before,
+.teamOwerlay:hover:after {
+    opacity: 1;
+}
+
+.teamLinks {
+    position: absolute;
+    top: 40%;
+    Left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 5;
+}
+
+.teamOwerlay:hover + .teamLinks,
+.teamOwerlay:focus + .teamLinks {
+    opacity: 1;
 }
 
 .teamImg {
     display: block;
     width: 100%;
     margin-bottom: 16px;
+}
+
+.socialList {
+    display: flex;
+}
+
+.socialItem:not(:last-child) {
+    margin-right: 25px;
+}
+
+.socialIcon {
+    width: 35px;
+    height: 35px;
+    fill: white
 }
 
 .name {

@@ -1,16 +1,10 @@
 import teams from './teamArr/teamArr'
 import TeamItem from './TeamItem/TeamItem'
-import socialIconsArr from '../Social/socialIcons/socialIconsArr';
 
 import styles from './Team.module.css';
-import icons from '../../assets/sprite.svg'
 
 function Team() {
-
-  // const { socialLink } = teams
   
-
-
   return (
     <section className={styles.team} id='team'>
     <div className={styles.rest}>
