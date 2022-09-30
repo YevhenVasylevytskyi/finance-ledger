@@ -1,7 +1,7 @@
 .header {
     position: fixed;
-    width: 100%;
-    padding: 21px 22px 0px 22px;
+    width: 272px;
+    padding: 24px 22px 24px 22px;
     z-index: 10;
     margin: 0 auto;
     font-weight: 400;
@@ -92,7 +92,7 @@
 @media screen and (min-width: 768px) {
     .header {
         display: flex;
-        padding:23px 32px 0px 32px;
+        padding:23px 32px 23px 32px;
         width: 704px;
         align-items: center;
         justify-content: space-between;        
@@ -120,6 +120,9 @@
     .logoSvg {
         margin-right: 10px;
     }
+    .logoTitle {
+        font-size: 35px;
+    }
 
     .navItem {
         padding: 0 10px;
@@ -130,18 +133,26 @@
         line-height: 1.56;
     }
 
+    .list {
+        font-size: 18px;
+    }
+
     
 }
 
 @media screen and (min-width: 1360px) {
     .header {
-        padding: 32px 28px 0px 28px;
+        padding: 32px 28px 32px 28px;
         width: 1304px;
         /* padding: 12px 0; */
     }
     .active {
         padding: 32px 28px 32px 28px;
         width: 1304px;
+    }
+
+    .logoTitle {
+        font-size: 44px;
     }
 
     .navItem {
