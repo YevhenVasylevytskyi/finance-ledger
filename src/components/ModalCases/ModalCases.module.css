@@ -14,7 +14,7 @@
 
 .modalImg {
     border-radius: 10px;
-    width: 1300px;
+    width: 1000px;
     border: 4px solid var(--text-white);
     margin-bottom: 10px;
 }
@@ -122,7 +122,7 @@
     }
 
     .modalBtnRight {
-        adding-left: 500px;
-        left: 53.5%;
+        /* padding-left: 500px; */
+        /* left: 53.5%; */
     }
 }
