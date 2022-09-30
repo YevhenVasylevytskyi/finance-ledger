@@ -12,19 +12,21 @@ function TeamItem({ team, styles, socialIconsArr }) {
                         type="image/jpg"/>
                         <img className={styles.teamImg} src={team.jpg1x} alt={team.alt} />
                     </picture>
-                </div>
-                <div className={styles.teamLinks}>                                   
-                    <SocialLinksList                        
-                        styles={styles}
-                        socialIconsArr={socialIconsArr}
-                    />
+                
+                    <div className={styles.teamLinks}>                                   
+                        <SocialLinksList                        
+                            styles={styles}
+                            socialIconsArr={socialIconsArr}
+                        />
 
-                </div>
-                <div className={styles.description}>
-                        <h3 className={styles.name}>{team.name}</h3>
-                        <p className={styles.position}>{team.position}</p>
+                    </div>
                 </div>
             </div>
+            <div className={styles.description}>
+                <h3 className={styles.name}>{team.name}</h3>
+                <p className={styles.position}>{team.position}</p>
+            </div>
+            
         </li>
     );
 }

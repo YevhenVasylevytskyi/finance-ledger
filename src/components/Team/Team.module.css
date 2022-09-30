@@ -71,10 +71,11 @@
 
 .teamLinks {
     position: absolute;
-    top: 40%;
+    top: 50%;
     Left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    z-index: 5;
 
 }
 
@@ -91,6 +92,11 @@
 
 .socialList {
     display: flex;
+}
+
+.socialItem {
+    width: 35px;
+    height: 35px;
 }
 
 .socialItem:not(:last-child) {
