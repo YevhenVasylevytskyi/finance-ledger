@@ -92,6 +92,7 @@
 
 .socialList {
     display: flex;
+    justify-content: center;
 }
 
 .socialItem {
@@ -125,7 +126,6 @@
 @media screen and (min-width: 768px) {
     .team {
         padding-right: 32px;
-        border-left: 32px;
     }
     
     .teamList {
@@ -142,6 +142,11 @@
     .teamItem:nth-child(3n) {
         margin-right: 0px;
     }
+
+    .socialItem:not(:last-child) {
+        margin-right: 15px;
+    }
+
 
     .teamSubtitle {
         font-size: 20px;
@@ -174,6 +179,10 @@
         margin-right: 20px;
         margin-bottom: 20px;
         width: calc((100% - 40px) / 3);
+    }
+
+    .socialItem:not(:last-child) {
+        margin-right: 25px;
     }
 
     .teamText {
