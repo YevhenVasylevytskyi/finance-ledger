@@ -14,6 +14,12 @@
     color: var(--text-white);
 }
 
+.contactSubtitle {
+    font-size: 18px;
+    line-height: 1.66;
+    margin-bottom: 8px;
+}
+
 .contactTitle {
     font-weight: 300;
     font-size: 32px;
@@ -27,6 +33,19 @@
     flex-direction: column;
 }
 
+.formSubmitBtn {
+    display: block;
+    font-size: 16px;
+    line-height: 1.37;
+    text-align: center;
+    color: var(--text-white);
+    padding: 10px 0;
+    border: 1px solid var(--light-background);
+    border-radius: 5px;
+    color: inherit;
+    background: var(--background-color);
+}
+
 .formItem {
     width: 280px;
     display: inline-block;
@@ -35,11 +54,14 @@
 }
 
 .formInput {
-    width: 228px;
-    height: 40px;
-    padding: 5px 15px;
-    margin-bottom: 32px;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    width: 226px;
+    height: 56px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
     border-radius: 5px;
+    border: 1px solid var(--light-background);    
 }
 
 .formLabel {
@@ -106,6 +128,11 @@
         padding-left: 32px;
     }
 
+    .formInput {
+        width: 264px;
+        height: 57px;
+    }
+
     .formSubmitBtn {
         font-size: 18px;
         line-height: 1.38;
@@ -118,6 +145,10 @@
     }
     .contactDescription {
         padding: 80px 28px 80px 20px;
+    }
+
+    .formInput {
+        width: 570px;
     }
 
     .inputEmail {

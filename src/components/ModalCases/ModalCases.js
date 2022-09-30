@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import icons from '../../assets/sprite.svg'
 
-import styles from './Modal.module.css'
+import styles from './ModalCases.module.css'
 
-const modalRoot = document.querySelector('#modal-root');
+const modalRoot = document.querySelector('#modal-cases');
 
 const Modal = ({ active, setActive, itemLooking, onCloseModal, changeImage, images }) => {
     

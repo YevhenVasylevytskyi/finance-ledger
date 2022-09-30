@@ -1,46 +1,80 @@
-import styles from './Contact.module.css';
-import icons from '../../assets/sprite.svg';
-
 import contactWebp1x from '../../assets/images/contact/contact.webp';
 import contactWebp2x from '../../assets/images/contact/contact@2x.webp';
 import contactJpg1x from '../../assets/images/contact/contact.jpg';
 import contactJpg2x from '../../assets/images/contact/contact@2x.jpg';
 
+import styles from './Contact.module.css';
+
 function Contact() {
-  return (
+   
+    return (    
     <section className={styles.contact} id={'contact'}>
-            <div className={styles.contactContainer}>
-                <div className={styles.contactItem}> 
-                    <picture className='pic'>
-                        <source srcSet={`${contactWebp1x} 1x, ${contactWebp2x} 2x`}type='image/webp'/>
-                        <source srcSet={`${contactJpg1x} 1x, ${contactJpg2x} 2x`}/>
-                        <img className={styles.contactImg} src={contactJpg1x} alt='man' />
-                    </picture>
-              </div> 
-              <div className={styles.contactItem}>
-                <div className={styles.contactDescription}>
-                    <h2 className={styles.contactTitle}>Request Callback</h2>
-                    <form  className={styles.form}>
-                        <div className={styles.formItem}>
-                            <input className={styles.formInput} placeholder=' ' name='name' type='text' id='user-name' />
-                            <label className={styles.formLabel} htmlFor='user-name'>Enter your name</label>
-                        </div>
-                        <div className={styles.formItem}>
-                            <input className={styles.formInput} placeholder=' ' name='email' type='text' id='user-email' />
-                            <label className={styles.formLabel} htmlFor='user-email'>Enter email*</label>
-                            <p className={styles.worning}>
-                                <svg className={styles.iconWorning} width='7' height='10'>
-                                    <use href={`${icons}#worning`} />
-                                </svg>
-                                <span className='text-worning'>This is required field</span>
-                            </p>
-                        </div>
-                        <button type='submit' className={styles.formSubmitBtn}>Send</button>
-                    </form>
-                </div>
+        <div className={styles.contactContainer}>
+            <picture className='pic'>
+                <source srcSet={`${contactWebp1x} 1x, ${contactWebp2x} 2x`}type='image/webp'/>
+                <source srcSet={`${contactJpg1x} 1x, ${contactJpg2x} 2x`}/>
+                <img className={styles.contactImg} src={contactJpg1x} alt='man' />
+            </picture>
+            <div className={styles.contactDescription}>
+                <h2 className={styles.contactTitle}>Request Callback</h2>           
+                        
+                    <form
+                        className={styles.form}
+                        name="contact"
+                        method="post"
+                    >
+                    <input
+                        type="hidden"
+                        name="form-name"
+                        value="contact" 
+                    />
+                            
+                    <div className={styles.formItem}>
+
+                        <input
+                            className={styles.formInput}
+                            placeholder="Enter your name"
+                            name="name"
+                            type="text"
+                            id="user-name"
+                        />
+
+                        <label
+                            className={styles.formLabel}
+                            htmlFor="user-name"
+                        >                                    
+                        </label> 
+                        </div> 
+
+                    <div className={styles.formItem}>
+
+                        <input
+                            className={styles.formInput}
+                            placeholder="Enter email*"
+                            name="email"
+                            type="text"
+                            id="user-email"
+                        />
+
+                        <label
+                            className={styles.formLabel}
+                            htmlFor="user-email"
+                        >
+                        </label>
+                                
+                    </div>
+
+                    <button
+                        className={styles.formSubmitBtn}
+                        type="submit"
+                    >
+                        Send
+                    </button>
+
+                </form>,
             </div>
-          </div>
-        </section>
+        </div>
+    </section>
   );
 }
 
