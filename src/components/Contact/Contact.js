@@ -3,9 +3,26 @@ import contactWebp2x from '../../assets/images/contact/contact@2x.webp';
 import contactJpg1x from '../../assets/images/contact/contact.jpg';
 import contactJpg2x from '../../assets/images/contact/contact@2x.jpg';
 
+import { useForm } from 'react-hook-form'
+
+import icons from '../../assets/sprite.svg';
 import styles from './Contact.module.css';
 
 function Contact() {
+    const {
+        register,
+        formState: {
+          errors,  
+        },
+        handleSubmit,
+        reset,
+    } = useForm({
+        mode: "onBlur"
+    });
+
+    const onSubmit = (data) => {
+        reset()
+    }
    
     return (    
     <section className={styles.contact} id={'contact'}>
@@ -19,6 +36,7 @@ function Contact() {
                 <h2 className={styles.contactTitle}>Request Callback</h2>           
                         
                     <form
+                        onSubmit={handleSubmit(onSubmit)}
                         className={styles.form}
                         name="contact"
                         method="post"
@@ -36,8 +54,9 @@ function Contact() {
                             placeholder="Enter your name"
                             name="name"
                             type="text"
-                            id="user-name"
-                        />
+                            id="user-name"                                
+                            />                          
+                        
 
                         <label
                             className={styles.formLabel}
@@ -53,7 +72,10 @@ function Contact() {
                             placeholder="Enter email*"
                             name="email"
                             type="text"
-                            id="user-email"
+                                id="user-email"
+                                {...register("email", {
+                                    required: true
+                                })}
                         />
 
                         <label
@@ -62,7 +84,19 @@ function Contact() {
                         >
                         </label>
                                 
-                    </div>
+                        </div>
+                        <div className={styles.worningContainer}>
+                            {errors?.email &&
+                                <div className={styles.worning}>
+                                    <svg className={styles.iconWorning} width="7"    height="10">
+                                        <use href={`${icons}#worning`} />
+                                    </svg>
+                                    <span className="text-worning">
+                                        This is required field
+                                    </span>
+                                </div>
+                            }
+                        </div>
 
                     <button
                         className={styles.formSubmitBtn}
@@ -71,7 +105,7 @@ function Contact() {
                         Send
                     </button>
 
-                </form>,
+                </form>
             </div>
         </div>
     </section>

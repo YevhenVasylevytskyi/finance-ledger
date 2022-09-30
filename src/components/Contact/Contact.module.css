@@ -78,10 +78,15 @@
     transition: .3s;
 }
 
+.worningContainer {
+
+height: 15px;
+padding-bottom: 5px;
+}
+
 .worning {
     font-size: 12px;
     display: flex;
-    position: absolute;
     bottom: 8px;
     color: #eb5757;
 }
@@ -89,6 +94,7 @@
 .iconWorning {
     width: 16px;
     height: 16px;
+    fill: #eb5757;
 }
 
 .formSubmitBtn {
