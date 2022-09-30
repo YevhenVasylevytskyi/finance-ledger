@@ -3,7 +3,9 @@ import contactWebp2x from '../../assets/images/contact/contact@2x.webp';
 import contactJpg1x from '../../assets/images/contact/contact.jpg';
 import contactJpg2x from '../../assets/images/contact/contact@2x.jpg';
 
-import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form';
+import { sendFormNetlify } from './formNetlify';
+
 
 import icons from '../../assets/sprite.svg';
 import styles from './Contact.module.css';
@@ -11,18 +13,15 @@ import styles from './Contact.module.css';
 function Contact() {
     const {
         register,
-        formState: {
-          errors,  
-        },
         handleSubmit,
         reset,
-    } = useForm({
-        mode: "onBlur"
-    });
+        formState: { errors },
+    } = useForm({ mode: 'onBlur' });
 
-    const onSubmit = (data) => {
-        reset()
-    }
+    const createUser = credentials => {
+        sendFormNetlify(credentials);
+        reset();
+    };
    
     return (    
     <section className={styles.contact} id={'contact'}>
@@ -36,26 +35,26 @@ function Contact() {
                 <h2 className={styles.contactTitle}>Request Callback</h2>           
                         
                     <form
-                        onSubmit={handleSubmit(onSubmit)}
+                        autoComplete="off"
+                        onSubmit={handleSubmit(createUser)}
                         className={styles.form}
                         name="contact"
                         method="post"
                     >
-                    <input
+                    {/* <input
                         type="hidden"
                         name="form-name"
                         value="contact" 
-                    />
+                    /> */}
                             
                     <div className={styles.formItem}>
 
                         <input
                             className={styles.formInput}
                             placeholder="Enter your name"
-                            name="name"
-                            type="text"
-                            id="user-name"                                
-                            />                          
+                            {...register('name')}
+                            type="text"                                            
+                        />                          
                         
 
                         <label
